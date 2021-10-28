@@ -1,0 +1,7 @@
+/notebooks
+.ipynb_checkpoints
+.DS_store
+*.swp
+*.pyc
+ltxpng
+__pycache__

@@ -1,0 +1,15 @@
+lc = 0.25;
+Point(1) = {-1, -1, 0, lc};
+Point(2) = {1, -1, 0, lc};
+Point(3) = {1, 1, 0, lc};
+Point(4) = {-1, 1, 0, lc};
+Line(1) = {1, 2};
+Line(2) = {2, 3};
+Line(3) = {3, 4};
+Line(4) = {4, 1};
+Line Loop(5) = {3, 4, 1, 2};
+Plane Surface(6) = {5};
+Recombine Surface {6};
+Physical Line("nbc") = {3, 2};
+Physical Line("ebc") = {4, 1};
+Physical Surface("interior") = {6};
