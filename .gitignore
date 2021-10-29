@@ -1,3 +1,5 @@
+/env
+/*.egg-info
 /notebooks
 .ipynb_checkpoints
 .DS_store
