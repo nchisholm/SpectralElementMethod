@@ -17,6 +17,9 @@ setup(
     author='Nicholas G. Chisholm',
     author_email='nchishol@alumni.cmu.edu',
     packages=['sem'],
+    package_data={
+        "sem": ["data/*.hdf5"]
+    },
     description=('A library for solving partial differential equations'
                  'using the spectral element method'),
     install_requires=read_requirements()
