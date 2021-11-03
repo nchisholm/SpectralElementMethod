@@ -178,6 +178,8 @@ def parse_elements_bin(f, mesh, bnd_mesh, region_id_map, boundary_id_map):
         try:
             geometry = geo_tbl[elem_type]
         except KeyError:
+            print ("I am in KeyError section of grid_importer.py")
+            print(elem_type)
             geometry = construct_geometry[elem_type]()
             geo_tbl[elem_type] = geometry
             if geometry.ndim == mesh.ndim:
