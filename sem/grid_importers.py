@@ -177,6 +177,8 @@ def parse_elements_bin(f, mesh, bnd_mesh, region_id_map, boundary_id_map):
         # Fetch (or construct) the element geometry
         try:
             geometry = geo_tbl[elem_type]
+            print("The try section worked out")
+            print(geo_tbl[elem_type])
         except KeyError:
             print ("I am in KeyError section of grid_importer.py")
             print(elem_type)
